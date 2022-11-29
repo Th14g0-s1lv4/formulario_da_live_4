@@ -1,0 +1,67 @@
+@media (max-width: 630px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position:absolute;
+        left: 0;
+        top: 80px;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        transform: scaleX(0);
+    }
+
+    .menu>li {
+        display: flex;
+        /*O display flex visa organizar os elementos de uma pagina HTML dentro de seus container de forma dinâmica. independente das suas dimensões eles sempre manterão um layout flexivel dentro do elemento pai */
+        justify-content: center;
+        /*alinha os itens do container flexivel quando os itens ñ usam todo o espaço disponivel no eixo princiapal */
+        margin: 0;
+        /*Definiçao da área da margem*/
+        padding: 0;
+        /*As propriedades padding sao usadas para gerar espaço ao redor do conteudo de um elemento*/
+        width: 100%;
+        /*largura de um elemento*/
+        color: white;
+        /*cor do elemento*/
+        background-color: black;
+        /*cor de fundo do elemento*/
+    }
+
+    label{
+        cursor: pointer;
+        /* ao passar o mouse por cima ira indicar um objeto clicavel */
+        position: relative;
+        /* altera a posição do elemento em relaçao ao elemento pai e em relaçao a si mesmo e onde normalmente estaria */
+        display: block;
+        /* transforma o elemento em bloco, ocupando toda a tela dispnivel ou delimitada */
+        height: 22px;
+        /* altura */
+        width: 30px;
+        /* largura */
+    }
+    label span{
+        position: absolute;
+        /* é posicionado em relaçao ao ancestral posicionado mais proximo */
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: white;
+        border-radius: 30px;
+        /* arredondamento dos cantos */
+        transition: 0.25s ease-in-out;
+
+    }
+    label span:nth-child(1){
+        top:0px
+    }
+    label span:nth-child(2){
+        top: 8px;
+    }
+    label span:nth-child(3){
+        top: 16px;
+    }
+}
